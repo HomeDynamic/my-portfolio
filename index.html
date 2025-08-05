@@ -1,98 +1,220 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aqsa Akbar - Portfolio</title>
 
-export default function Portfolio() {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
-      {/* Sidebar */}
-      <div className="md:col-span-1 bg-white rounded-2xl shadow p-4">
-        <h1 className="text-2xl font-bold mb-2">Aqsa Akbar</h1>
-        <p className="text-sm text-gray-600 mb-4">
-          Full Stack Developer | WordPress Expert | Graphic Designer
-        </p>
-        <div className="space-y-2">
-          <p>Email: akbaraqsa528@gmail.com</p>
-          <p>Phone: 0309-7317790</p>
-          <p>Location: Bahawalpur, Pakistan</p>
-          <p>Languages: Urdu, English</p>
-          <a href="https://www.linkedin.com/in/aqsa-akbar-1b2020300" target="_blank">LinkedIn</a><br />
-          <a href="https://github.com/dashboard" target="_blank">GitHub</a><br />
-          <a href="https://www.fiverr.com/users/aqsaakbar456/seller_dashboard" target="_blank">Fiverr</a>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      padding-top: 80px;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .skills .card, .projects .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 15px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .testimonial-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    .btn-contact {
+      background-color: #fff;
+      color: #2575fc;
+      border: none;
+      font-weight: bold;
+      padding: 10px 25px;
+      border-radius: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Aqsa Akbar</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-up">
+    <h1>Hello, I’m Aqsa Akbar</h1>
+    <p>Full Stack Developer | WordPress Expert | UI/UX Enthusiast</p>
+    <a href="#contact" class="btn btn-contact mt-3">Contact Me</a>
+  </section>
+
+  <!-- About -->
+  <section class="container" data-aos="fade-up" id="about">
+    <h2 class="section-title">About Me</h2>
+    <p class="text-center">
+      I'm a dedicated Full Stack Developer from Bahawalpur, Pakistan with 3+ years of experience building dynamic, responsive websites. I specialize in WordPress, Laravel, and front-end frameworks. I love solving problems and creating impactful designs that help businesses grow.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="container mt-5 skills" data-aos="fade-up" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="row g-4">
+      <div class="col-md-3"><div class="card p-3"><h5>HTML</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5>CSS</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5>Bootstrap</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5>Tailwind CSS</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5>JavaScript</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5>React.js</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5>PHP</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5>Laravel</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5>WordPress</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5>Elementor</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5>WooCommerce</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5>Canva</h5></div></div>
+      <div class="col-md-3"><div class="card p-3"><h5>Photoshop</h5></div></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="container mt-5 projects" data-aos="fade-up" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>Dynamic Bits Website</h5>
+          <p>Responsive business website with dynamic UI.</p>
+          <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+          <a href="https://dynamicbits.tech/" target="_blank" class="btn btn-contact mt-2">Live Site</a>
         </div>
       </div>
-
-      {/* Main Content */}
-      <div className="md:col-span-2 space-y-6">
-        {/* Intro */}
-        <Card>
-          <CardContent className="p-4">
-            <h2 className="text-xl font-semibold mb-2">About Me</h2>
-            <p>
-              I'm a dedicated Full Stack Developer and creative Graphic Designer from Bahawalpur, Pakistan. I specialize in creating dynamic websites using modern technologies like Laravel, React, and WordPress. I love turning complex problems into simple, beautiful, and intuitive designs. Let's collaborate to bring your vision to life.
-            </p>
-          </CardContent>
-        </Card>
-
-        {/* Skills */}
-        <Card>
-          <CardContent className="p-4">
-            <h2 className="text-xl font-semibold mb-2">Skills</h2>
-            <ul className="list-disc list-inside">
-              <li>HTML, CSS, Bootstrap, Tailwind CSS</li>
-              <li>JavaScript, React.js</li>
-              <li>PHP, Laravel</li>
-              <li>WordPress, Elementor, WooCommerce</li>
-              <li>Canva, Photoshop</li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        {/* Projects */}
-        <Card>
-          <CardContent className="p-4">
-            <h2 className="text-xl font-semibold mb-2">Projects</h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="font-bold">Dynamic Tour Website</h3>
-                <p>A visually engaging tourism platform built with HTML, CSS, and JavaScript.</p>
-                <a href="https://dynamicbits.tech/" target="_blank">View Project</a>
-              </div>
-              <div>
-                <h3 className="font-bold">Real Estate Portal</h3>
-                <p>A Laravel-based platform to manage property listings with secure user login.</p>
-                <a href="https://realestate.mightymediatech.com/login" target="_blank">View Project</a>
-              </div>
-              <div>
-                <h3 className="font-bold">FNA Motors Store</h3>
-                <p>WordPress WooCommerce store for vehicle parts and accessories built with Elementor.</p>
-                <a href="https://fnamotors.com/" target="_blank">View Project</a>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Certifications */}
-        <Card>
-          <CardContent className="p-4">
-            <h2 className="text-xl font-semibold mb-2">Certifications</h2>
-            <ul className="list-disc list-inside">
-              <li>Front-End Development – IT Center – 2023</li>
-              <li>SEO – Yazman Visual Institute – 2022</li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        {/* Education */}
-        <Card>
-          <CardContent className="p-4">
-            <h2 className="text-xl font-semibold mb-2">Education</h2>
-            <ul className="list-disc list-inside">
-              <li>MCS – Islamia University Bahawalpur – 2021-2024</li>
-            </ul>
-          </CardContent>
-        </Card>
-
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>Real Estate Platform</h5>
+          <p>Laravel-based property listing portal with login system.</p>
+          <p><strong>Tech:</strong> Laravel, PHP</p>
+          <a href="https://realestate.mightymediatech.com/login" target="_blank" class="btn btn-contact mt-2">Live Site</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+          <h5>FNA Motors</h5>
+          <p>Modern car showroom website built in WordPress.</p>
+          <p><strong>Tech:</strong> WordPress, WooCommerce, Elementor</p>
+          <a href="https://fnamotors.com/" target="_blank" class="btn btn-contact mt-2">Live Site</a>
+        </div>
       </div>
     </div>
-  );
-}
+  </section>
+
+  <!-- Certifications -->
+  <section class="container mt-5" data-aos="fade-up" id="certifications">
+    <h2 class="section-title">Certifications</h2>
+    <ul class="list-group list-group-flush text-center">
+      <li class="list-group-item bg-transparent text-white">Front-End Development – IT Center – 2023</li>
+      <li class="list-group-item bg-transparent text-white">SEO – Yazman Visual Institute – 2022</li>
+    </ul>
+  </section>
+
+  <!-- Education -->
+  <section class="container mt-5" data-aos="fade-up" id="education">
+    <h2 class="section-title">Education</h2>
+    <p class="text-center">MCS – Islamia University Bahawalpur (2021 - 2024)</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="container mt-5" data-aos="fade-up" id="testimonials">
+    <h2 class="section-title">Testimonials</h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <p>"Aqsa revamped our WooCommerce store with precision. Her communication and delivery were outstanding!"</p>
+          <h6 class="mt-3">– Hira Rehman, Store Owner</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <p>"Highly skilled in Laravel. Aqsa built a full-featured platform on time and with perfect functionality."</p>
+          <h6 class="mt-3">– Ali Usman, Real Estate Agency</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <p>"I loved working with her on my WordPress site. She gave life to my vision with a clean and responsive design."</p>
+          <h6 class="mt-3">– Sana Imran, Blogger</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="container mt-5" data-aos="fade-up" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p class="text-center">Email: akbaraqsa528@gmail.com | Phone: 0309-7317790</p>
+    <p class="text-center">
+      <a href="https://www.linkedin.com/in/aqsa-akbar-1b2020300" target="_blank" class="btn btn-light m-1">LinkedIn</a>
+      <a href="https://github.com/dashboard" target="_blank" class="btn btn-light m-1">GitHub</a>
+      <a href="https://www.fiverr.com/users/aqsaakbar456/seller_dashboard" target="_blank" class="btn btn-light m-1">Fiverr</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Aqsa Akbar. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
